@@ -4,11 +4,11 @@ import requests
 url = "https://api.openai.com/v1/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer u"
+    "Authorization": "Bearer sk-"
 }
 data = {
     "model": "text-davinci-003",
-    "prompt": "什么是chatGPT？",
+    "prompt": "如何使用python call chatGPT的api？",
     "temperature": 0,
     "max_tokens": 1000
 }
@@ -19,4 +19,4 @@ if response.status_code == 200:
     result = response.json()["choices"][0]["text"]
     print(result)
 else:
-    print("API 请求失败！")
+    print("API 请求失败")
